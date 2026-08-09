@@ -163,16 +163,31 @@
   .chip{font-family:var(--font-mono); font-size:10.5px; padding:5px 9px; border:1px solid var(--border); border-radius:99px; color:var(--text-faint);}
 
   /* ===== REQUEST SERVICE ===== */
-  .request{border:1px solid var(--border); border-radius:14px; background:linear-gradient(135deg, var(--surface), var(--bg-alt)); padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;}
+  .request{border:1px solid var(--border); border-radius:14px; background:linear-gradient(135deg, var(--surface), var(--bg-alt)); padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;}
   .request h2{font-size:clamp(21px, 2.6vw, 27px); margin-bottom:10px;}
   .request p{font-size:13.5px; max-width:42ch;}
-  .form-preview{border:1px solid var(--border-soft); border-radius:10px; background:var(--bg-alt); padding:18px;}
-  .form-preview .fp-title{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:12px;}
-  .fp-field{display:flex; flex-direction:column; gap:4px; margin-bottom:11px;}
-  .fp-field label{font-size:11.5px; color:var(--text-faint);}
-  .fp-field .fp-input{border:1px solid var(--border); border-radius:6px; background:var(--surface); padding:8px 10px; font-size:12.5px; color:var(--text-dim);}
-  .fp-field:last-of-type{margin-bottom:16px;}
-  .request-cta{margin-top:6px;}
+  .request-note{font-size:12px; color:var(--text-faint); margin-top:16px; max-width:42ch;}
+  .form-card{border:1px solid var(--border-soft); border-radius:10px; background:var(--bg-alt); padding:22px;}
+  .form-card .fp-title{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:14px;}
+  .f-field{display:flex; flex-direction:column; gap:5px; margin-bottom:13px;}
+  .f-field label{font-size:11.5px; color:var(--text-faint);}
+  .f-field input, .f-field select, .f-field textarea{
+    border:1px solid var(--border); border-radius:6px; background:var(--surface);
+    padding:9px 11px; font-size:13px; color:var(--text); font-family:var(--font-body);
+    width:100%;
+  }
+  .f-field textarea{resize:vertical; min-height:72px;}
+  .f-field input::placeholder, .f-field textarea::placeholder{color:var(--text-faint);}
+  .f-field input:focus, .f-field select:focus, .f-field textarea:focus{outline:2px solid var(--amber); outline-offset:1px; border-color:var(--amber);}
+  .f-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .f-submit{
+    width:100%; font-family:var(--font-mono); font-size:13px; padding:11px 18px;
+    background:var(--amber); color:#181109; border:none; border-radius:6px;
+    font-weight:600; cursor:pointer; transition:opacity .2s; margin-top:4px;
+  }
+  .f-submit:hover{opacity:.9;}
+  .f-status{font-size:12px; color:var(--teal); margin-top:10px; display:none;}
+  .f-status.show{display:block;}
 
   /* ===== FOOTER ===== */
   footer{border-top:1px solid var(--border-soft); padding:26px 0;}
@@ -217,7 +232,7 @@
       <li><a href="#approach">Approach</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#request">Request a service</a></li>
-      <li><a href="https://forms.gle/YOUR-FORM-ID" class="nav-cta" target="_blank" rel="noopener">Request a service</a></li>
+      <li><a href="#request" class="nav-cta">Request a service</a></li>
     </ul>
   </nav>
 </header>
@@ -233,7 +248,7 @@
           <h1>Governed data is what makes AI <em>trustworthy</em>, not just fast.</h1>
           <p class="hero-sub">Independent consulting in data governance and applied AI for organisations running complex, regulated, operational data — built on ten years turning raw engineering and energy data into trusted intelligence.</p>
           <div class="hero-actions">
-            <a href="https://forms.gle/YOUR-FORM-ID" class="btn-primary" target="_blank" rel="noopener">Request a service →</a>
+            <a href="#request" class="btn-primary">Request a service →</a>
             <a href="#services" class="btn-ghost">View the four pillars</a>
           </div>
         </div>
@@ -429,18 +444,32 @@
         <div>
           <span class="eyebrow">Get started</span>
           <h2 style="margin-top:8px;">Request a service.</h2>
-          <p>Tell me about your organisation, the data challenge you're facing, and which of the four pillars is the priority. I'll follow up to scope a first conversation.</p>
-          <div class="request-cta">
-            <a href="https://forms.gle/YOUR-FORM-ID" class="btn-primary" target="_blank" rel="noopener">Open the request form →</a>
-          </div>
+          <p>Tell me about your organisation, the data challenge you're facing, and which of the four pillars is the priority. Submitting opens your email client with everything pre-filled, addressed straight to me.</p>
+    
         </div>
-        <div class="form-preview">
-          <div class="fp-title">Request form — what I'll ask for</div>
-          <div class="fp-field"><label>Full name</label><div class="fp-input">Jane Smith</div></div>
-          <div class="fp-field"><label>Organisation</label><div class="fp-input">Company or team name</div></div>
-          <div class="fp-field"><label>Work email</label><div class="fp-input">jane@company.com</div></div>
-          <div class="fp-field"><label>Service of interest</label><div class="fp-input">Data Literacy / AI Safety / AI Agents / AI Readiness</div></div>
-          <div class="fp-field"><label>Project details &amp; timeline</label><div class="fp-input">Brief description, and when you'd like to start</div></div>
+        <div class="form-card">
+          <div class="fp-title">Request form</div>
+          <form id="requestForm">
+            <div class="f-row">
+              <div class="f-field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" placeholder="Jane Smith" required></div>
+              <div class="f-field"><label for="f-org">Organisation</label><input id="f-org" name="organisation" type="text" placeholder="Company or team name" required></div>
+            </div>
+            <div class="f-field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" placeholder="jane@company.com" required></div>
+            <div class="f-field">
+              <label for="f-service">Service of interest</label>
+              <select id="f-service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Data Literacy">Data Literacy</option>
+                <option value="AI Safety">AI Safety</option>
+                <option value="AI Agents">AI Agents</option>
+                <option value="AI Readiness">AI Readiness</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="f-field"><label for="f-details">Project details &amp; timeline</label><textarea id="f-details" name="details" placeholder="Brief description, and when you'd like to start" required></textarea></div>
+            <button type="submit" class="f-submit">Send request →</button>
+            <div class="f-status" id="fStatus">Opening your email client with your request pre-filled…</div>
+          </form>
         </div>
       </div>
     </div>
@@ -472,6 +501,35 @@
     navLinks.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   }));
+
+  // Request form -> mailto submission (no backend required)
+  const RECIPIENT_EMAIL = 'nasirsam08@gmail.com';
+  const requestForm = document.getElementById('requestForm');
+  const fStatus = document.getElementById('fStatus');
+  requestForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const org = document.getElementById('f-org').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const service = document.getElementById('f-service').value;
+    const details = document.getElementById('f-details').value.trim();
+
+    const subject = `Service request: ${service} — ${org}`;
+    const body =
+`New service request from the website
+
+Name: ${name}
+Organisation: ${org}
+Email: ${email}
+Service of interest: ${service}
+
+Project details & timeline:
+${details}`;
+
+    const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    fStatus.classList.add('show');
+    window.location.href = mailtoLink;
+  });
 </script>
 
 </body>
