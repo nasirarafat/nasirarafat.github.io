@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 <meta name="description" content="Nasir Arafat – Data & AI Lead specialising in renewable energy, big data engineering, cloud architecture, and AI-driven insight solutions.">
 <meta name="author" content="Nasir Arafat">
 <meta name="keywords" content="Nasir Arafat, Data AI Lead, ScottishPower, Big Data Engineer, Cloud Architecture, Renewable Energy AI">
@@ -8,503 +5,474 @@
 <link rel="canonical" href="https://nasirarafat.github.io/">
 
   
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nasir Arafat — Data & AI Engineer &amp; Data Architect</title>
-<meta name="description" content="Data & AI Engineer | Data Architect | Data Governance | Data & AI Mentor | Data Readiness for AI">
+<title>Nasir Arafat — Data Governance &amp; AI Consulting</title>
+<meta name="description" content="Data governance and AI consulting for regulated, operational data — data literacy, AI safety, AI agents, and AI readiness, grounded in 10+ years of renewable energy data engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0B1220;
-    --panel:#111B2E;
-    --panel-2:#0E1626;
-    --line:#233047;
-    --cyan:#4FD1C5;
-    --amber:#F2A65A;
-    --text:#E8ECF1;
-    --muted:#8B96A8;
-    --radius:10px;
+    --bg:#0D141C;
+    --bg-alt:#0F1822;
+    --surface:#141F29;
+    --surface-2:#182430;
+    --border:#233241;
+    --border-soft:#1B2733;
+    --text:#EEF2F5;
+    --text-dim:#8FA1B0;
+    --text-faint:#576673;
+    --amber:#E8A33D;
+    --amber-soft:rgba(232,163,61,0.12);
+    --teal:#3FB6A8;
+    --teal-soft:rgba(63,182,168,0.12);
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background:var(--ink);
+    background:
+      radial-gradient(900px 460px at 88% -8%, rgba(63,182,168,0.06), transparent 58%),
+      radial-gradient(700px 400px at -8% 6%, rgba(232,163,61,0.05), transparent 55%),
+      var(--bg);
     color:var(--text);
-    font-family:'Inter', sans-serif;
-    line-height:1.6;
+    font-family:var(--font-body);
+    line-height:1.55;
+    font-size:15px;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,h4{font-family:'Space Grotesk', sans-serif; font-weight:600; letter-spacing:-0.01em;}
-  .mono{font-family:'JetBrains Mono', monospace;}
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  ::selection{background:var(--cyan); color:var(--ink);}
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+  :focus-visible{outline:2px solid var(--amber); outline-offset:3px; border-radius:2px;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--amber); font-weight:500;
+  }
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; letter-spacing:-0.01em; color:var(--text);}
+  p{color:var(--text-dim);}
 
-  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
-  section{padding:96px 0;}
-  @media (max-width:640px){ section{padding:64px 0;} }
-
-  /* ---------- NAV ---------- */
-  nav{
+  /* ===== NAV ===== */
+  header{
     position:sticky; top:0; z-index:50;
-    background:rgba(11,18,32,0.85); backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    background:rgba(13,20,28,0.88); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
   }
-  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 28px;}
-  .nav-logo{font-family:'JetBrains Mono', monospace; font-size:14px; color:var(--cyan); letter-spacing:0.02em;}
-  .nav-links{display:flex; gap:28px; font-size:14px; color:var(--muted);}
+  nav{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1120px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--font-mono); font-size:13px; text-decoration:none; color:var(--text); font-weight:500;}
+  .brand-mark{width:24px; height:24px; border-radius:6px; border:1px solid var(--amber); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:11px; font-weight:700; color:var(--amber); flex-shrink:0;}
+  .nav-links{display:flex; align-items:center; gap:26px; list-style:none;}
+  .nav-links a{font-size:13.5px; text-decoration:none; color:var(--text-dim); transition:color .2s;}
   .nav-links a:hover{color:var(--text);}
-  @media (max-width:640px){ .nav-links{display:none;} }
+  .nav-cta{font-family:var(--font-mono); font-size:12.5px; padding:8px 14px; background:var(--amber); border-radius:5px; color:#161006; text-decoration:none; white-space:nowrap; font-weight:600; transition:opacity .2s;}
+  .nav-cta:hover{opacity:.88;}
+  .nav-toggle{display:none;}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    padding:120px 0 100px;
-    position:relative;
-    overflow:hidden;
-    border-bottom:1px solid var(--line);
+  /* ===== HERO ===== */
+  .hero{padding:64px 0 44px; border-bottom:1px solid var(--border-soft);}
+  .hero-top{display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center;}
+  .hero-status{display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-faint); border:1px solid var(--border); padding:5px 11px; border-radius:99px; margin-bottom:18px;}
+  .hero-status .dot{width:6px; height:6px; border-radius:50%; background:var(--teal); box-shadow:0 0 8px var(--teal);}
+  .hero h1{font-size:clamp(30px, 3.6vw, 44px); line-height:1.08;}
+  .hero h1 em{font-style:normal; color:var(--amber);}
+  .hero-sub{margin-top:16px; font-size:15.5px; max-width:50ch; color:var(--text-dim);}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;}
+  .btn-primary{font-family:var(--font-mono); font-size:13px; padding:11px 18px; background:var(--amber); color:#181109; border-radius:6px; text-decoration:none; font-weight:600; transition:transform .15s, box-shadow .15s; display:inline-flex; align-items:center; gap:6px;}
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 8px 18px -8px rgba(232,163,61,.5);}
+  .btn-ghost{font-family:var(--font-mono); font-size:13px; padding:11px 18px; border:1px solid var(--border); color:var(--text-dim); border-radius:6px; text-decoration:none; transition:border-color .2s, color .2s;}
+  .btn-ghost:hover{border-color:var(--text-dim); color:var(--text);}
+
+  /* signal diagram — compact card beside headline */
+  .signal{border:1px solid var(--border); border-radius:12px; background:linear-gradient(180deg, var(--surface), var(--bg-alt)); padding:20px 20px 18px;}
+  .signal-label-row{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:18px;}
+  .signal-track{position:relative;}
+  .signal-line{position:absolute; left:20px; top:20px; bottom:20px; width:1px; background:repeating-linear-gradient(180deg, var(--border) 0 6px, transparent 6px 12px);}
+  .signal-node{position:relative; display:flex; gap:12px; padding:12px 0;}
+  .signal-node .ring{width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:var(--bg-alt); display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:2;}
+  .signal-node[data-n="1"] .ring{border-color:var(--text-faint);}
+  .signal-node[data-n="2"] .ring{border-color:var(--amber); box-shadow:0 0 0 3px var(--amber-soft);}
+  .signal-node[data-n="3"] .ring{border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-soft);}
+  .signal-node .ring svg{width:16px; height:16px;}
+  .signal-node .n-label{font-family:var(--font-mono); font-size:11.5px; color:var(--text); margin-bottom:2px;}
+  .signal-node .n-sub{font-size:11.5px; color:var(--text-faint);}
+  .signal-pulse{position:absolute; left:20px; top:20px; width:7px; height:7px; margin-left:-3.5px; border-radius:50%; background:var(--amber); box-shadow:0 0 10px 3px rgba(232,163,61,.6); animation:travelY 4.5s linear infinite;}
+  @keyframes travelY{
+    0%{top:20px; opacity:0;} 6%{opacity:1;} 46%{top:calc(50% - 3.5px); opacity:1;}
+    50%{opacity:0;} 54%{top:calc(50% - 3.5px); opacity:0;} 60%{opacity:1;}
+    94%{top:calc(100% - 24px); opacity:1;} 100%{top:calc(100% - 24px); opacity:0;}
   }
-  .hero-eyebrow{
-    font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--cyan);
-    text-transform:uppercase; letter-spacing:0.12em; margin-bottom:18px;
-    display:flex; align-items:center; gap:10px;
+  @media (prefers-reduced-motion: reduce){ .signal-pulse{animation:none; opacity:.85;} }
+
+  /* trust strip */
+  .trust-strip{display:flex; align-items:center; gap:26px; flex-wrap:wrap; padding:20px 0; border-top:1px solid var(--border-soft); margin-top:38px;}
+  .trust-strip .lead{font-family:var(--font-mono); font-size:11px; color:var(--text-faint); letter-spacing:.06em; text-transform:uppercase;}
+  .trust-strip span.item{font-size:13px; color:var(--text-dim); font-weight:500;}
+
+  /* ===== SECTION SHARED ===== */
+  section{padding:56px 0;}
+  .section-head{max-width:600px; margin-bottom:36px;}
+  .section-head h2{font-size:clamp(22px, 2.6vw, 30px); margin-top:8px;}
+  .section-head p{margin-top:10px; font-size:14.5px;}
+  .divider{border-bottom:1px solid var(--border-soft);}
+
+  /* ===== SERVICES (ProdGain-style stacked OS blocks) ===== */
+  .service-row{display:grid; grid-template-columns:0.9fr 1.1fr; gap:40px; align-items:center; padding:34px 0; border-top:1px solid var(--border-soft);}
+  .service-row:last-child{border-bottom:1px solid var(--border-soft);}
+  .service-head{display:flex; align-items:center; gap:12px; margin-bottom:12px;}
+  .service-icon{width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:var(--font-mono); font-size:12px; font-weight:600;}
+  .service-icon.dl{background:var(--amber-soft); color:var(--amber); border:1px solid rgba(232,163,61,.35);}
+  .service-icon.as{background:var(--teal-soft); color:var(--teal); border:1px solid rgba(63,182,168,.35);}
+  .service-icon.ag{background:var(--amber-soft); color:var(--amber); border:1px solid rgba(232,163,61,.35);}
+  .service-icon.ar{background:var(--teal-soft); color:var(--teal); border:1px solid rgba(63,182,168,.35);}
+  .service-num{font-family:var(--font-mono); font-size:11px; color:var(--text-faint);}
+  .service-row h3{font-size:19px; margin-bottom:8px;}
+  .service-row p.desc{font-size:14px; max-width:44ch;}
+  .service-caps{list-style:none; margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:9px 18px;}
+  .service-caps li{font-size:12.5px; color:var(--text-dim); display:flex; gap:7px; align-items:flex-start;}
+  .service-caps li::before{content:"→"; color:var(--amber); flex-shrink:0; font-size:11px; margin-top:1px;}
+  .service-visual{border:1px solid var(--border); border-radius:12px; background:var(--surface); padding:22px; min-height:170px; display:flex; flex-direction:column; justify-content:center; gap:10px;}
+  .service-visual .vline{height:8px; border-radius:4px; background:var(--surface-2); position:relative; overflow:hidden;}
+  .service-visual .vline i{position:absolute; left:0; top:0; bottom:0; border-radius:4px; display:block;}
+  .service-visual .vlabel{font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); display:flex; justify-content:space-between;}
+
+  /* ===== APPROACH ===== */
+  .approach-list{display:grid; grid-template-columns:repeat(4, 1fr); border-top:1px solid var(--border-soft);}
+  .approach-item{padding:22px 20px 22px 0; border-right:1px solid var(--border-soft);}
+  .approach-item:last-child{border-right:none;}
+  .approach-num{font-family:var(--font-mono); font-size:11px; color:var(--amber); margin-bottom:10px;}
+  .approach-item h3{font-size:15.5px; margin-bottom:6px;}
+  .approach-item p{font-size:12.5px;}
+
+  /* ===== ABOUT ===== */
+  .about-grid{display:grid; grid-template-columns:1.25fr 1fr; gap:44px; align-items:start;}
+  .about-text p{color:var(--text-dim); font-size:14px; margin-bottom:13px;}
+  .about-text p strong{color:var(--text); font-weight:600;}
+  .credentials{border:1px solid var(--border); border-radius:12px; background:var(--surface); padding:22px;}
+  .credentials h3{font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); font-weight:500; margin-bottom:13px;}
+  .credentials h3.second{margin-top:18px;}
+  .cred-list{list-style:none; display:flex; flex-direction:column; gap:9px; margin-bottom:4px;}
+  .cred-list li{display:flex; gap:9px; align-items:flex-start; font-size:13px; color:var(--text-dim);}
+  .cred-list li::before{content:""; width:5px; height:5px; border-radius:1px; background:var(--amber); margin-top:6px; flex-shrink:0;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:7px;}
+  .chip{font-family:var(--font-mono); font-size:10.5px; padding:5px 9px; border:1px solid var(--border); border-radius:99px; color:var(--text-faint);}
+
+  /* ===== REQUEST SERVICE ===== */
+  .request{border:1px solid var(--border); border-radius:14px; background:linear-gradient(135deg, var(--surface), var(--bg-alt)); padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;}
+  .request h2{font-size:clamp(21px, 2.6vw, 27px); margin-bottom:10px;}
+  .request p{font-size:13.5px; max-width:42ch;}
+  .form-preview{border:1px solid var(--border-soft); border-radius:10px; background:var(--bg-alt); padding:18px;}
+  .form-preview .fp-title{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:12px;}
+  .fp-field{display:flex; flex-direction:column; gap:4px; margin-bottom:11px;}
+  .fp-field label{font-size:11.5px; color:var(--text-faint);}
+  .fp-field .fp-input{border:1px solid var(--border); border-radius:6px; background:var(--surface); padding:8px 10px; font-size:12.5px; color:var(--text-dim);}
+  .fp-field:last-of-type{margin-bottom:16px;}
+  .request-cta{margin-top:6px;}
+
+  /* ===== FOOTER ===== */
+  footer{border-top:1px solid var(--border-soft); padding:26px 0;}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  .footer-row p{font-size:12.5px; color:var(--text-faint);}
+  .footer-links{display:flex; gap:20px; list-style:none;}
+  .footer-links a{font-size:12.5px; color:var(--text-faint); text-decoration:none;}
+  .footer-links a:hover{color:var(--text-dim);}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:900px){
+    .hero-top{grid-template-columns:1fr; gap:30px;}
+    .service-row{grid-template-columns:1fr; gap:20px;}
+    .request{grid-template-columns:1fr;}
   }
-  .hero-eyebrow::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--cyan); box-shadow:0 0 12px var(--cyan); animation:pulse 2s infinite;}
-  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.4;}}
-  .hero h1{font-size:clamp(2.4rem, 6vw, 4rem); line-height:1.05; margin-bottom:20px;}
-  .hero .role{font-size:clamp(1.05rem, 2vw, 1.3rem); color:var(--muted); max-width:620px; margin-bottom:36px;}
-  .role .sep{color:var(--amber); margin:0 8px;}
-  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
-  .btn{
-    font-family:'JetBrains Mono', monospace; font-size:13px; padding:13px 24px;
-    border-radius:6px; display:inline-flex; align-items:center; gap:8px;
-    transition:transform .15s ease, box-shadow .15s ease; letter-spacing:0.02em;
+  @media (max-width:820px){
+    .nav-links{position:fixed; top:57px; left:0; right:0; background:var(--bg-alt); border-bottom:1px solid var(--border); flex-direction:column; align-items:flex-start; padding:18px 24px; gap:16px; transform:translateY(-140%); transition:transform .25s ease;}
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block; background:none; border:1px solid var(--border); color:var(--text); border-radius:6px; width:36px; height:32px; font-family:var(--font-mono); cursor:pointer;}
+    .about-grid{grid-template-columns:1fr;}
+    .approach-list{grid-template-columns:1fr 1fr;}
+    .approach-item{border-bottom:1px solid var(--border-soft);}
+    .trust-strip{gap:16px;}
   }
-  .btn-primary{background:var(--cyan); color:var(--ink); font-weight:500;}
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 24px -8px rgba(79,209,197,0.5);}
-  .btn-ghost{border:1px solid var(--line); color:var(--text);}
-  .btn-ghost:hover{border-color:var(--cyan); color:var(--cyan);}
-
-  /* pipeline decoration in hero */
-  .hero-flow{
-    margin-top:64px; display:flex; align-items:center; gap:0;
-    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--muted);
-    flex-wrap:wrap;
-  }
-  .flow-node{border:1px solid var(--line); padding:8px 14px; border-radius:20px; white-space:nowrap;}
-  .flow-line{width:36px; height:1px; background:linear-gradient(90deg, var(--line), var(--cyan)); position:relative;}
-  @media (max-width:640px){ .flow-line{display:none;} }
-
-  /* ---------- SECTION HEADERS ---------- */
-  .sec-head{margin-bottom:44px;}
-  .sec-num{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; display:block;}
-  .sec-head h2{font-size:clamp(1.5rem, 3vw, 2.1rem);}
-
-  /* ---------- SUMMARY ---------- */
-  .summary p{color:var(--muted); font-size:1.05rem; max-width:760px; margin-bottom:18px;}
-  .summary strong{color:var(--text); font-weight:500;}
-  .contact-card{
-    margin-top:36px; background:var(--panel); border:1px solid var(--line);
-    border-radius:var(--radius); padding:24px 28px; display:flex; gap:40px; flex-wrap:wrap;
-  }
-  .contact-item .label{font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
-  .contact-item .value{font-size:15px;}
-
-  /* ---------- EXPERTISE GRID ---------- */
-  .expertise-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
-  @media (max-width:640px){ .expertise-grid{grid-template-columns:1fr;} }
-  .expertise-cell{background:var(--panel); padding:26px 28px;}
-  .expertise-cell h3{font-size:15px; color:var(--cyan); margin-bottom:10px;}
-  .expertise-cell p{color:var(--muted); font-size:14px;}
-
-  /* ---------- PIPELINE / EXPERIENCE ---------- */
-  .pipeline{position:relative; padding-left:32px;}
-  .pipeline::before{
-    content:''; position:absolute; left:5px; top:6px; bottom:6px; width:2px;
-    background:linear-gradient(180deg, var(--cyan), var(--line) 90%);
-  }
-  .pipe-role{position:relative; margin-bottom:56px;}
-  .pipe-role:last-child{margin-bottom:0;}
-  .pipe-role::before{
-    content:''; position:absolute; left:-32px; top:4px; width:12px; height:12px;
-    border-radius:50%; background:var(--ink); border:2px solid var(--cyan);
-  }
-  .pipe-dates{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--amber); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.04em;}
-  .pipe-role h3{font-size:1.15rem; margin-bottom:4px;}
-  .pipe-role .subrole{color:var(--muted); font-size:14px; margin-bottom:14px;}
-  .pipe-role ul{list-style:none; padding:0;}
-  .pipe-role li{position:relative; padding-left:18px; color:var(--muted); font-size:14.5px; margin-bottom:8px;}
-  .pipe-role li::before{content:'—'; position:absolute; left:0; color:var(--line);}
-  .company-tag{display:inline-block; font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--cyan); border:1px solid var(--line); border-radius:20px; padding:5px 14px; margin-bottom:28px;}
-
-  .achv-grid{margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
-  @media (max-width:768px){ .achv-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:480px){ .achv-grid{grid-template-columns:1fr;} }
-  .achv-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px;}
-  .achv-card h4{font-size:13.5px; color:var(--text); margin-bottom:6px;}
-  .achv-card p{font-size:13px; color:var(--muted);}
-
-  /* ---------- SPEAKING GALLERY ---------- */
-  .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
-  @media (max-width:768px){ .gallery{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:480px){ .gallery{grid-template-columns:1fr;} }
-  .gal-item{border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--panel);}
-  .gal-item img{aspect-ratio:4/3; object-fit:cover; width:100%;}
-  .gal-cap{padding:14px 16px; font-size:13px; color:var(--muted);}
-
-  /* ---------- CAREER TIMELINE (horizontal-ish) ---------- */
-  .timeline{display:flex; flex-direction:column; gap:0;}
-  .tl-item{display:grid; grid-template-columns:140px 1fr; gap:24px; padding:20px 0; border-bottom:1px solid var(--line);}
-  .tl-item:first-child{padding-top:0;}
-  .tl-item:last-child{border-bottom:none;}
-  @media (max-width:560px){ .tl-item{grid-template-columns:1fr;} }
-  .tl-year{font-family:'JetBrains Mono', monospace; color:var(--amber); font-size:13px;}
-  .tl-item h4{font-size:15px; margin-bottom:4px;}
-  .tl-item p{color:var(--muted); font-size:14px;}
-
-  /* ---------- EDUCATION / CERTS ---------- */
-  .card-list{display:flex; flex-direction:column; gap:14px;}
-  .edu-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px 28px; display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap;}
-  .edu-card h3{font-size:16px; margin-bottom:4px;}
-  .edu-card .deg{color:var(--cyan); font-size:14px; margin-bottom:4px;}
-  .edu-card .field{color:var(--muted); font-size:13.5px;}
-  .edu-card .yr{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--muted); white-space:nowrap;}
-
-  .cert-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:14px;}
-  @media (max-width:640px){ .cert-grid{grid-template-columns:1fr;} }
-  .cert-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px;}
-  .cert-card h4{font-size:14.5px; margin-bottom:6px;}
-  .cert-card p{font-size:13px; color:var(--muted);}
-
-  .honor-list{display:flex; flex-direction:column; gap:0;}
-  .honor-item{display:flex; gap:18px; padding:18px 0; border-bottom:1px solid var(--line); align-items:baseline;}
-  .honor-item:last-child{border-bottom:none;}
-  .honor-mark{font-family:'JetBrains Mono', monospace; color:var(--cyan); font-size:12px; flex-shrink:0;}
-  .honor-item h4{font-size:14.5px; margin-bottom:3px;}
-  .honor-item p{font-size:13px; color:var(--muted);}
-
-  /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--line); padding:64px 0 40px;}
-  .footer-cta h2{font-size:clamp(1.6rem, 4vw, 2.4rem); margin-bottom:18px;}
-  .footer-cta p{color:var(--muted); max-width:520px; margin-bottom:32px;}
-  .footer-bottom{margin-top:64px; padding-top:24px; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:var(--muted); font-family:'JetBrains Mono', monospace;}
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
+  @media (max-width:560px){
+    .approach-list{grid-template-columns:1fr;}
+    .service-caps{grid-template-columns:1fr;}
+    .hero{padding:52px 0 36px;}
+    section{padding:44px 0;}
+    .request{padding:26px;}
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="nav-logo">nasir.arafat()</div>
-    <div class="nav-links">
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#honors">Honors</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-eyebrow">Currently building at ScottishPower · Data &amp; AI CoE</div>
-    <h1>Nasir Arafat</h1>
-    <p class="role">Big Data Engineer<span class="sep">/</span>Data Architect<span class="sep">/</span>Data Governance<span class="sep">/</span>Data &amp; AI Mentor<span class="sep">/</span>British Council GREAT Scholar</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:nasirsam08@gmail.com">Get in touch →</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/nasir-arafat" target="_blank" rel="noopener">View LinkedIn</a>
-    </div>
-    <div class="hero-flow">
-      <div class="flow-node">raw data</div><div class="flow-line"></div>
-      <div class="flow-node">pipeline</div><div class="flow-line"></div>
-      <div class="flow-node">governance</div><div class="flow-line"></div>
-      <div class="flow-node">insight</div>
-    </div>
-  </div>
+<header>
+  <nav>
+    <a href="#top" class="brand"><span class="brand-mark">N</span>NASIR ARAFAT</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">≡</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#request">Request a service</a></li>
+      <li><a href="https://forms.gle/YOUR-FORM-ID" class="nav-cta" target="_blank" rel="noopener">Request a service</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section id="summary">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">01 · Profile</span>
-      <h2>Professional summary</h2>
-    </div>
-    <div class="summary">
-      <p><strong>Microsoft Certified Data Engineer</strong> with a background in applying Big Data and analytics to drive innovation and efficiency in the renewable energy sector. Focused on data analytics, technical leadership, and continuously improving data-driven strategy.</p>
-      <p>Ten years of combined industry and academic experience across the data domain, with a track record of implementing advanced analytics solutions and business intelligence tooling — delivering strong data products and building a healthy data culture in service of strategic goals.</p>
-      <p>Active in thought leadership through CDOXUK, Network Group, PyData, and DataNext Europe, and mentors through The Data Lab. A qualified First-Aider, and recipient of the British Council GREAT Scholarship and the King's Award for Voluntary Service.</p>
-    </div>
-    <div class="contact-card">
-      <div class="contact-item">
-        <div class="label">Email</div>
-        <div class="value"><a href="mailto:nasirsam08@gmail.com">nasirsam08@gmail.com</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="label">Location</div>
-        <div class="value">Glasgow, Scotland, United Kingdom</div>
-      </div>
-      <div class="contact-item">
-        <div class="label">LinkedIn</div>
-        <div class="value"><a href="https://www.linkedin.com/in/nasir-arafat" target="_blank" rel="noopener">/in/nasir-arafat</a></div>
-      </div>
-    </div>
-  </div>
-</section>
+<main id="top">
 
-<section id="expertise">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">02 · Stack</span>
-      <h2>Core technical expertise</h2>
-    </div>
-    <div class="expertise-grid">
-      <div class="expertise-cell">
-        <h3>Data cloud platforms</h3>
-        <p>Azure SQL, Azure Data Factory, Azure Synapse Analytics, AWS Redshift, Data Lake</p>
-      </div>
-      <div class="expertise-cell">
-        <h3>Big data engineering &amp; governance</h3>
-        <p>Synapse, Power BI, MicroStrategy, Informatica, Oracle — advanced analytics &amp; reporting solutions</p>
-      </div>
-      <div class="expertise-cell">
-        <h3>Data architecture &amp; development</h3>
-        <p>Data migration, Azure DevOps Services, data modeling, schema development, end-to-end analytics</p>
-      </div>
-      <div class="expertise-cell">
-        <h3>Data science &amp; AI</h3>
-        <p>Machine learning, predictive analytics, anomaly detection</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <div class="hero-status"><span class="dot"></span>Data &amp; AI Technical Lead, Renewables Centre of Excellence</div>
+          <h1>Governed data is what makes AI <em>trustworthy</em>, not just fast.</h1>
+          <p class="hero-sub">Independent consulting in data governance and applied AI for organisations running complex, regulated, operational data — built on ten years turning raw engineering and energy data into trusted intelligence.</p>
+          <div class="hero-actions">
+            <a href="https://forms.gle/YOUR-FORM-ID" class="btn-primary" target="_blank" rel="noopener">Request a service →</a>
+            <a href="#services" class="btn-ghost">View the four pillars</a>
+          </div>
+        </div>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">03 · Track record</span>
-      <h2>Experience</h2>
-    </div>
-
-    <span class="company-tag">ScottishPower — Data SME in CoE · 3 yrs 8 mos</span>
-    <div class="pipeline">
-      <div class="pipe-role">
-        <div class="pipe-dates">April 2023 — Present</div>
-        <h3>Data Engineer — Data &amp; AI, Renewables CoE</h3>
-        <div class="subrole">Big Data Engineer · Data Architect · Data Governance · Cloud &amp; BI Strategist</div>
+        <div class="signal">
+          <div class="signal-label-row">Raw data → governed intelligence</div>
+          <div class="signal-track">
+            <div class="signal-line"></div>
+            <div class="signal-pulse"></div>
+            <div class="signal-node" data-n="1">
+              <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--text-faint)"><path d="M3 12h4l2 6 4-12 2 6h6"/></svg></div>
+              <div><div class="n-label">RAW SIGNAL</div><div class="n-sub">SCADA, sensor &amp; operational data</div></div>
+            </div>
+            <div class="signal-node" data-n="2">
+              <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--amber)"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div><div class="n-label">GOVERNANCE GATE</div><div class="n-sub">Quality, lineage &amp; safety controls</div></div>
+            </div>
+            <div class="signal-node" data-n="3">
+              <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--teal)"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+              <div><div class="n-label">TRUSTED INSIGHT</div><div class="n-sub">AI-ready decisions &amp; agents</div></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="pipe-role">
-        <div class="pipe-dates">April 2022 — March 2023</div>
-        <h3>Technical Lead — Big Data &amp; Analytics, DigitalHub (UKIT)</h3>
-        <div class="subrole">Leading teams to implement advanced analytics solutions across the organisation</div>
+
+      <div class="trust-strip">
+        <span class="lead">Track record across</span>
+        <span class="item">ScottishPower · Renewables CoE</span>
+        <span class="item">Mordor Intelligence</span>
+        <span class="item">CDOXUK</span>
+        <span class="item">PyData</span>
+        <span class="item">DataNext Europe</span>
+        <span class="item">The Data Lab</span>
       </div>
     </div>
+  </section>
 
-    <div class="achv-grid">
-      <div class="achv-card"><h4>Data leadership</h4><p>Leading a team of data analysts &amp; consultants to implement advanced analytics &amp; reporting solutions.</p></div>
-      <div class="achv-card"><h4>Analytics &amp; governance</h4><p>Supporting BI &amp; governance tooling — Synapse, Power BI, Fabric, MicroStrategy, Informatica — for stakeholders.</p></div>
-      <div class="achv-card"><h4>Process automation</h4><p>Improving KPI implementation to drive best value and streamline processes through automation.</p></div>
-      <div class="achv-card"><h4>Self-service analytics</h4><p>Developing concepts that improve efficiency, such as self-serve reporting and analytics.</p></div>
-      <div class="achv-card"><h4>Data &amp; AI literacy</h4><p>Advocating data literacy through microsites and training as part of the digital engagement strategy.</p></div>
-      <div class="achv-card"><h4>Agile leadership</h4><p>Leading stand-ups and participating in project scrums under Agile development methodologies.</p></div>
-    </div>
+  <!-- SERVICES -->
+  <section id="services" class="divider">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where I work</span>
+        <h2>Four pillars, one governed foundation.</h2>
+        <p>AI is only as safe, useful, and adoptable as the data foundation underneath it. Each engagement draws on these capabilities to build that foundation and put it to work.</p>
+      </div>
 
-    <div style="margin-top:64px;">
-      <span class="company-tag">Mordor Intelligence — Data Science Excellence · 4 yrs 11 mos</span>
-      <div class="pipeline">
-        <div class="pipe-role">
-          <div class="pipe-dates">September 2020 — March 2022</div>
-          <h3>Data Scientist &amp; Process Analyst</h3>
-          <ul>
-            <li>Led data science projects including an anomaly detection engine and a lead classifier engine</li>
-            <li>Scouted technological solutions and finalised optimal approaches for projects</li>
-            <li>Assisted team leads in setting up design, architecture, and execution steps</li>
-            <li>Set up training documents and monitoring mechanisms to evaluate progress</li>
+      <div class="service-row">
+        <div>
+          <div class="service-head"><div class="service-icon dl">DL</div><span class="service-num">01 / Data Literacy</span></div>
+          <h3>Build a data-fluent organisation</h3>
+          <p class="desc">Teams that trust, question, and use data confidently — not just receive dashboards.</p>
+          <ul class="service-caps">
+            <li>Data literacy programmes &amp; microsites</li>
+            <li>Self-serve analytics enablement</li>
+            <li>Stakeholder training</li>
+            <li>Data culture design</li>
           </ul>
         </div>
-        <div class="pipe-role">
-          <div class="pipe-dates">September 2018 — September 2020</div>
-          <h3>Data Scientist</h3>
-          <ul>
-            <li>Built predictive models using historical data to forecast business performance</li>
-            <li>Mapped the customer journey end-to-end and suggested improvements</li>
-            <li>Produced and tracked performance metrics across all organisational levels</li>
-            <li>Led objective-oriented mini-projects with direct revenue impact</li>
+        <div class="service-visual">
+          <div class="vlabel"><span>ADOPTION</span><span>78%</span></div>
+          <div class="vline"><i style="width:78%; background:var(--amber);"></i></div>
+          <div class="vlabel"><span>SELF-SERVE USAGE</span><span>64%</span></div>
+          <div class="vline"><i style="width:64%; background:var(--teal);"></i></div>
+          <div class="vlabel"><span>TRAINING COMPLETION</span><span>91%</span></div>
+          <div class="vline"><i style="width:91%; background:var(--amber);"></i></div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div>
+          <div class="service-head"><div class="service-icon as">AS</div><span class="service-num">02 / AI Safety</span></div>
+          <h3>Guardrails that hold up under scrutiny</h3>
+          <p class="desc">Risk-aware, auditable AI adoption — built for regulated, high-consequence environments.</p>
+          <ul class="service-caps">
+            <li>AI risk &amp; impact assessments</li>
+            <li>Governance frameworks &amp; access controls</li>
+            <li>Model &amp; data drift monitoring</li>
+            <li>Audit-ready documentation</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="speaking">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">04 · Community</span>
-      <h2>Speaking at data panels &amp; roundtables</h2>
-    </div>
-    <div class="gallery">
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/7dd0d8ac5648451ba7d420dffa9bb211/original/nasir_datanext.jpeg" alt="DataNext Architecture Europe panel" loading="lazy">
-        <div class="gal-cap">DataNext Architecture Europe — Panel</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/ccf2ad519a6645bca7e1fda1c7534431/original/1686072789275.jpg" alt="CDO Network UK roundtable" loading="lazy">
-        <div class="gal-cap">CDO Network UK — Roundtable on Data Governance</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/dd7be46314c84e7f82bb8adb5ab2ee32/original/1654971413870.jpg" alt="Datakirk panel on data literacy" loading="lazy">
-        <div class="gal-cap">Datakirk Panel on Data Literacy</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/ac53e8ea14f440cba0741829286a1e89/original/CDO_pic.jpg" alt="CDOX panel on data governance" loading="lazy">
-        <div class="gal-cap">CDOX Panel on Data Governance</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/bda7ee2930d14689b21dcb07e99fa6f6/original/Pydata.jfif" alt="PyData Glasgow session" loading="lazy">
-        <div class="gal-cap">PyData Glasgow — scalable ETL pipelines with Azure Synapse &amp; PySpark</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:800/https://cdn.gamma.app/3k2ktzle57omykn/73f131586cf44f7d9afaf7af6e68cd31/original/datanextengineering.jfif" alt="DataNext Conference talk" loading="lazy">
-        <div class="gal-cap">DataNext Conference — "From Governance to Readiness"</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="career-timeline">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">05 · Progression</span>
-      <h2>Career progression timeline</h2>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">2013 – 2014</div>
-        <div><h4>Software Engineer — Intern</h4><p>Summer internships at HCL Technologies and Jamia Hamdard.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2017 – 2018</div>
-        <div><h4>Data Analysis</h4><p>Data &amp; Business Analyst at Mordor Intelligence.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2018 – 2022</div>
-        <div><h4>Data Science &amp; Analytics</h4><p>Data Scientist &amp; Process Analyst roles at Mordor Intelligence.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2022 – Present</div>
-        <div><h4>Data Engineer</h4><p>Leading Big Data &amp; Analytics at ScottishPower CoE.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">06 · Education</span>
-      <h2>Education &amp; qualifications</h2>
-    </div>
-    <div class="card-list">
-      <div class="edu-card">
-        <div>
-          <h3>University of Stirling</h3>
-          <div class="deg">Master of Science</div>
-          <div class="field">Big Data (Computing Science &amp; Mathematics)</div>
+        <div class="service-visual">
+          <div class="vlabel"><span>DATA ACCESS</span><span>Governed</span></div>
+          <div class="vline"><i style="width:100%; background:var(--teal);"></i></div>
+          <div class="vlabel"><span>MODEL MONITORING</span><span>Continuous</span></div>
+          <div class="vline"><i style="width:88%; background:var(--amber);"></i></div>
+          <div class="vlabel"><span>AUDIT TRAIL</span><span>Complete</span></div>
+          <div class="vline"><i style="width:100%; background:var(--teal);"></i></div>
         </div>
-        <div class="yr">2015 – 2016</div>
       </div>
-      <div class="edu-card">
+
+      <div class="service-row">
         <div>
-          <h3>Coventry University</h3>
-          <div class="deg">British Council Global Leaders Programme</div>
-          <div class="field">Leadership and Strategies for Managers and Entrepreneurs</div>
+          <div class="service-head"><div class="service-icon ag">AG</div><span class="service-num">03 / AI Agents</span></div>
+          <h3>Agentic workflows on governed data</h3>
+          <p class="desc">Automating real operational decisions — not just chat interfaces.</p>
+          <ul class="service-caps">
+            <li>Agent architecture on trusted data layers</li>
+            <li>Anomaly detection &amp; decision-support agents</li>
+            <li>Human-in-the-loop workflow design</li>
+            <li>Integration with existing BI &amp; ops tooling</li>
+          </ul>
         </div>
-        <div class="yr">2021</div>
+        <div class="service-visual">
+          <div class="vlabel"><span>DETECTION LATENCY</span><span>-42%</span></div>
+          <div class="vline"><i style="width:58%; background:var(--amber);"></i></div>
+          <div class="vlabel"><span>MANUAL REVIEW LOAD</span><span>-35%</span></div>
+          <div class="vline"><i style="width:65%; background:var(--teal);"></i></div>
+          <div class="vlabel"><span>HUMAN-IN-LOOP COVERAGE</span><span>100%</span></div>
+          <div class="vline"><i style="width:100%; background:var(--amber);"></i></div>
+        </div>
       </div>
-      <div class="edu-card">
+
+      <div class="service-row">
         <div>
-          <h3>Jamia Hamdard</h3>
-          <div class="deg">Bachelor of Technology</div>
-          <div class="field">Information Technology</div>
+          <div class="service-head"><div class="service-icon ar">AR</div><span class="service-num">04 / AI Readiness</span></div>
+          <h3>The foundation AI initiatives need to scale</h3>
+          <p class="desc">Assessing and building the architecture, quality, and governance behind every AI use case.</p>
+          <ul class="service-caps">
+            <li>Data &amp; cloud architecture assessment</li>
+            <li>Data quality &amp; lineage foundations</li>
+            <li>Roadmap from raw data to AI-ready platform</li>
+            <li>Vendor &amp; platform selection support</li>
+          </ul>
         </div>
-        <div class="yr">2011 – 2015</div>
+        <div class="service-visual">
+          <div class="vlabel"><span>DATA QUALITY SCORE</span><span>92%</span></div>
+          <div class="vline"><i style="width:92%; background:var(--teal);"></i></div>
+          <div class="vlabel"><span>LINEAGE COVERAGE</span><span>85%</span></div>
+          <div class="vline"><i style="width:85%; background:var(--amber);"></i></div>
+          <div class="vlabel"><span>PLATFORM READINESS</span><span>96%</span></div>
+          <div class="vline"><i style="width:96%; background:var(--teal);"></i></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="certifications">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">07 · Credentials</span>
-      <h2>Certifications &amp; professional development</h2>
+  <!-- APPROACH -->
+  <section id="approach" class="divider">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How an engagement runs</span>
+        <h2>Assess, govern, enable, scale.</h2>
+        <p>The same sequence, whether it's a two-week readiness assessment or a multi-year technical lead role.</p>
+      </div>
+      <div class="approach-list">
+        <div class="approach-item"><div class="approach-num">01 / Assess</div><h3>Understand the data</h3><p>Audit sources, quality, architecture, and governance maturity against the use case.</p></div>
+        <div class="approach-item"><div class="approach-num">02 / Govern</div><h3>Put guardrails in place</h3><p>Establish ownership, lineage, quality controls, and safety boundaries first.</p></div>
+        <div class="approach-item"><div class="approach-num">03 / Enable</div><h3>Build literacy &amp; trust</h3><p>Train teams and ship self-serve tools that make the governed data usable.</p></div>
+        <div class="approach-item"><div class="approach-num">04 / Scale</div><h3>Deploy AI on solid ground</h3><p>Roll out agents and AI capability on a foundation already governed and adopted.</p></div>
+      </div>
     </div>
-    <div class="cert-grid">
-      <div class="cert-card"><h4>Amazon Redshift Essentials</h4><p>Advanced data warehousing and analytics on the AWS platform.</p></div>
-      <div class="cert-card"><h4>Azure Synapse Analytics</h4><p>Introduction to Microsoft Azure Synapse Analytics.</p></div>
-      <div class="cert-card"><h4>Data Engineering Foundations</h4><p>Core principles and best practices in data engineering.</p></div>
-      <div class="cert-card"><h4>AWS Essential Training</h4><p>AWS Essential Training for Developers.</p></div>
-      <div class="cert-card"><h4>Microsoft Certified Data Engineer</h4><p>Azure Data Engineer certification.</p></div>
-      <div class="cert-card"><h4>Big Data Analytics Conference</h4><p>Whitehall Media Big Data Analytics Europe Conference.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="honors">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">08 · Recognition</span>
-      <h2>Honors &amp; recognition</h2>
+  <!-- ABOUT -->
+  <section id="about" class="divider">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>Grounded in engineering data, not just AI theory.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><strong>Microsoft Certified Data Engineer</strong> with 10+ years of combined industry and academic experience in Big Data, Analytics, and AI. I specialise in using data to drive innovation, efficiency, and strategic decision-making in the renewable energy sector.</p>
+          <p>As <strong>Data &amp; AI Technical Lead for the Renewables Centre of Excellence</strong>, I deliver high-value data products, AI solutions, and insight capabilities that turn complex engineering and operational data into trusted, governed intelligence. I work as both project manager and data SME, across cloud platforms, Big Data engineering, data architecture, data governance, and AI-ready data foundations.</p>
+          <p>I contribute to the wider data community through <strong>CDOXUK, Network Group, PyData, and DataNext Europe</strong>, and mentor with <strong>The Data Lab</strong>. I'm also a qualified First-Aider, a British Council GREAT Scholar, and a recipient of the King's Award for Voluntary Service.</p>
+        </div>
+        <div class="credentials">
+          <h3>Community &amp; recognition</h3>
+          <ul class="cred-list">
+            <li>Mentor, The Data Lab</li>
+            <li>Contributor, CDOXUK &amp; Network Group</li>
+            <li>Speaker, PyData &amp; DataNext Europe</li>
+            <li>British Council GREAT Scholar</li>
+            <li>King's Award for Voluntary Service</li>
+          </ul>
+          <h3 class="second">Credentials</h3>
+          <div class="chip-row">
+            <span class="chip">MS Certified: Data Engineer</span>
+            <span class="chip">Azure Synapse</span>
+            <span class="chip">AWS Redshift</span>
+            <span class="chip">Power BI &amp; Fabric</span>
+            <span class="chip">First-Aider</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="honor-list">
-      <div class="honor-item">
-        <div class="honor-mark">01</div>
-        <div><h4>British Council GREAT Scholarship Award</h4><p>Prestigious scholarship recipient for academic excellence, 2015–16.</p></div>
-      </div>
-      <div class="honor-item">
-        <div class="honor-mark">02</div>
-        <div><h4>King's Award for Voluntary Service</h4><p>MBE-equivalent recognition — the highest award given to UK volunteer groups.</p></div>
-      </div>
-      <div class="honor-item">
-        <div class="honor-mark">03</div>
-        <div><h4>Annual Appreciation Award</h4><p>Recognised for exceptional collaboration and teamwork.</p></div>
-      </div>
-      <div class="honor-item">
-        <div class="honor-mark">04</div>
-        <div><h4>Superior Performer</h4><p>Acknowledged for outstanding performance and contributions.</p></div>
-      </div>
-      <div class="honor-item">
-        <div class="honor-mark">05</div>
-        <div><h4>Credit in Science</h4><p>Academic recognition for excellence in scientific studies.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer id="contact">
-  <div class="wrap">
-    <div class="footer-cta">
-      <h2>Let's talk data.</h2>
-      <p>Open to conversations on data architecture, governance, and building teams that turn raw data into reliable decisions.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:nasirsam08@gmail.com">Contact me →</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/nasir-arafat" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  <!-- REQUEST SERVICE -->
+  <section id="request">
+    <div class="wrap">
+      <div class="request">
+        <div>
+          <span class="eyebrow">Get started</span>
+          <h2 style="margin-top:8px;">Request a service.</h2>
+          <p>Tell me about your organisation, the data challenge you're facing, and which of the four pillars is the priority. I'll follow up to scope a first conversation.</p>
+          <div class="request-cta">
+            <a href="https://forms.gle/YOUR-FORM-ID" class="btn-primary" target="_blank" rel="noopener">Open the request form →</a>
+          </div>
+        </div>
+        <div class="form-preview">
+          <div class="fp-title">Request form — what I'll ask for</div>
+          <div class="fp-field"><label>Full name</label><div class="fp-input">Jane Smith</div></div>
+          <div class="fp-field"><label>Organisation</label><div class="fp-input">Company or team name</div></div>
+          <div class="fp-field"><label>Work email</label><div class="fp-input">jane@company.com</div></div>
+          <div class="fp-field"><label>Service of interest</label><div class="fp-input">Data Literacy / AI Safety / AI Agents / AI Readiness</div></div>
+          <div class="fp-field"><label>Project details &amp; timeline</label><div class="fp-input">Brief description, and when you'd like to start</div></div>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Nasir Arafat · Glasgow, Scotland</span>
-      <span>Built as a static, freely-hostable site</span>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <p>© Nasir Arafat · Glasgow, Scotland · Data Governance &amp; AI Consulting</p>
+      <ul class="footer-links">
+        <li><a href="mailto:nasirsam08@gmail.com">nasirsam08@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/nasir-arafat" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://nasirarafat.github.io/" target="_blank" rel="noopener">Portfolio</a></li>
+      </ul>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
 </script>
+
 </body>
 </html>
