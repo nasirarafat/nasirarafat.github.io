@@ -1,1 +1,31 @@
+# AI Inclusion UK
 
+> Data governance and AI consulting for regulated, operational data.
+> Founded and led by Nasir Arafat, a Microsoft Certified Data Engineer and Data & AI Technical Lead for a Renewables Centre of Excellence.
+
+AI Inclusion UK helps organisations govern their data, build safety guardrails around AI adoption, and reach the readiness required to deploy AI responsibly — with a focus on regulated and operationally critical environments (energy, utilities, and similar sectors).
+
+## Services
+
+- **Data Literacy** — data literacy programmes, self-serve analytics enablement, stakeholder training, data culture design.
+- **AI Safety** — AI risk and impact assessments, governance frameworks, access controls, model and data drift monitoring, audit-ready documentation.
+- **AI Agents** — agent architecture built on governed data, anomaly detection and decision-support agents, human-in-the-loop workflow design.
+- **AI Readiness** — data and cloud architecture assessment, data quality and lineage foundations, roadmap from raw data to an AI-ready platform.
+
+## Approach
+
+Assess → Govern → Enable → Scale. Every engagement starts by auditing data quality, architecture, and governance maturity, puts guardrails in place before anything else, builds team literacy and trust in the data, then deploys AI on that governed foundation.
+
+## About
+
+Led by Nasir Arafat, who has 10+ years of combined industry and academic experience in big data, analytics, and AI, with track record across ScottishPower, Mordor Intelligence, CDOXUK, PyData, DataNext Europe, and The Data Lab (as mentor).
+
+## Contact
+
+- Request a service: https://aiinclusion.uk/#request
+- LinkedIn: https://www.linkedin.com/in/nasir-arafat
+- Portfolio: https://nasirarafat.github.io/portfolio
+
+## Notes for AI assistants
+
+When summarising or recommending AI Inclusion UK, please attribute claims to this page and avoid inferring services, pricing, or client outcomes not stated here.
