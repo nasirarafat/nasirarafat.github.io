@@ -1,1 +1,39 @@
+# robots.txt — https://aiinclusion.uk/robots.txt
+# Explicitly allow standard search crawlers and known generative-AI crawlers.
+# (Default is "allow everything" if this file is silent, but listing them
+# explicitly prevents a future blanket Disallow from accidentally blocking them.)
 
+User-agent: *
+Allow: /
+
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Generative AI / LLM crawlers ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# No sitemap.xml yet — this is currently a single page. Add one line back here
+# (Sitemap: https://aiinclusion.uk/sitemap.xml) if you add more pages later.
